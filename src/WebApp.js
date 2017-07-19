@@ -5,8 +5,8 @@ const NavBar = (props) => {
     <nav className="nav">
       <ul className="nav-item-container">
         {
-          props.navLinks.map(function(item){
-            return <li> {item} </li>
+          props.navLinks.map(function(item, index){
+            return <li key={index}> {item} </li>
           })
         }
       </ul>
