@@ -25,24 +25,24 @@ const Jumbotron = (props) => {
 
 const SectionOne = (props) => {
   return(
-    <div className="SectionOne">
-      <h4> {props.header} </h4>
+    <div className="section-one">
+      <h4> {props.SectionOneHeader} </h4>
     </div>
   )
 }
 
 const SectionTwo = (props) => {
   return (
-    <div className="SectionTwo">
-      <h5> {props.header} </h5>
+    <div className="section-two">
+      <h5> {props.SectionTwoHeader} </h5>
     </div>
   )
 }
 
 const StectionThree = (props) => {
   return (
-    <div className="StectionThree">
-      <h6> {props.header} </h6>
+    <div className="section-three">
+      <h6> {props.SectionThreeHeader} </h6>
     </div>
   )
 }
@@ -55,11 +55,11 @@ const WebApp = () => {
         header={"Some Neato Jumbotron Header Message!"}
         callToAction={"I bilded dis App wit React :)"}/>
       <SectionOne
-        header={"Here's the Header for Section 1"}/>
+        SectionOneHeader={"Here's the Header for Section 1"}/>
       <SectionTwo
-        header={"Here's the Header for Section 2"}/>
+        SectionTwoHeader={"Here's the Header for Section 2"}/>
       <StectionThree
-        header={"Here's the Header for Section 3"}/>
+        SectionThreeHeader={"Here's the Header for Section 3"}/>
     </div>
   )
 }
