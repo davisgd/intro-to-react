@@ -1,0 +1,31 @@
+.app-container {
+  margin: 10px;
+}
+
+.nav {
+  background-color: green;
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  border: solid 5px black;
+}
+
+.nav-item-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item-container > li {
+  font-size: 25px;
+  list-style: none;
+}
+
+.jumbotron {
+  border: solid 10px lightblue;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 5px purple;
+  background-color: lightgrey;
+  font-size: 32px;
+}
