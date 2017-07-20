@@ -27,6 +27,7 @@ const SectionOne = (props) => {
   return(
     <div className="section-one">
       <h4> {props.SectionOneHeader} </h4>
+      <img className="img" src="http://www.robotshop.com/media/files/images2/neato-bv-connected-316-hi.jpg" />
     </div>
   )
 }
