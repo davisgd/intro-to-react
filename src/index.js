@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
-import WebApp from './WebApp';
+import App from './WebApp/App';
 import MappingAndFiltering from './MappingAndFiltering';
 import data from './data';
 
 ReactDOM.render(
-  <MappingAndFiltering
-    title={"Mappy Times!"}
-    allTheData={data}
-  />,
+  <App />,
   document.getElementById('root'))
