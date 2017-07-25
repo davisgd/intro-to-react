@@ -18,6 +18,13 @@
 .nav-item-container > li {
   font-size: 25px;
   list-style: none;
+  transition: text-shadow 0.5s ease;
+  transition: font-size 0.5s ease;
+}
+
+.nav-item-container :hover {
+  text-shadow: 3px 3px 5px red;
+  font-size: 36px;
 }
 
 .jumbotron {
@@ -25,12 +32,36 @@
   margin: 10px;
   padding: 10px;
   text-align: center;
-  text-shadow: 2px 2px 5px purple;
   background-color: lightgrey;
   font-size: 32px;
+  transition: text-shadow 1s ease;
+}
+
+.jumbotron-header {
+  transition: text-shadow 2s ease;
+  transition: font-size 0.5s ease;
+}
+
+.jumbotron-header :hover {
+  text-shadow: 2px 2px 5px purple;
+  font-size: 46px;
 }
 
 .img {
   width: 200px;
   height: 200px;
+}
+
+.chat-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chat-container > div {
+  width: 25%;
+}
+
+.acme-container > div {
+  width: 25%;
 }
