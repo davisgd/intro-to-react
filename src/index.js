@@ -1,7 +1,8 @@
-import './styles.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import './styles.css';
+
 import NavigationBar from './components/NavigationBar';
 import App from './WebApp/App';
 import ChatApp from './Chatter/ChatApp';

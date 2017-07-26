@@ -2,6 +2,9 @@
   margin: 10px;
 }
 
+.body {
+  background-image: url("http://facweb.cs.depaul.edu/sgrais/images/Ockham/dribbble_acme_800_logo.jpg");
+}
 .nav {
   background-color: green;
   color: white;
@@ -62,6 +65,69 @@
   width: 25%;
 }
 
-.acme-container > div {
-  width: 25%;
+.acme-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+}
+
+/* Pulse Grow - Courtesey IanLunn  https://github.com/IanLunn/Hover/blob/master/css/hover.css*/
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(4.1);
+    transform: scale(4.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(4.1);
+    transform: scale(4.1);
+  }
+
+.acme-cust-info {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  }
+}
+
+.acme-cust-info {
+  border: solid 5px black;
+  border-radius: 30px;
+  width: 33.333333%;
+  margin: 10px;
+  text-align: center;
+  background-color: red;
+}
+
+.acme-cust-info:hover, .acme-cust-info:focus, .acme-cust-info:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.cust-img {
+  width: inherit;
+  height: inherit;
+  border: solid 2px grey;
+}
+
+.acme-jumbotron {
+  text-align: center;
+  border: solid 5px lightblue;
+  border-radius: 30px;
+  font-family: fantasy;
+  font-size: 32px;
+  text-shadow: lightblue 3px 3px 4px;
+  color: grey;
 }
