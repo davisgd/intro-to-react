@@ -6,7 +6,8 @@ import './styles.css';
 import NavigationBar from './components/NavigationBar';
 import App from './WebApp/App';
 import ChatApp from './Chatter/ChatApp';
-import AcmeApp from './Acme/AcmeApp'
+import AcmeApp from './Acme/AcmeApp';
+import PlaygroundApp from './playground/PlaygroundApp';
 
 
 // Our router should navigate to:
@@ -25,10 +26,11 @@ const Home = () => {
 
 ReactDOM.render((
   <Router>
-    <div>
+    <div className="navigation-bar-container">
       <NavigationBar />
       <Route exact path="/" component={ Home } />
       <Route path="/WebApp" component={ App } />
+      <Route path="/PlaygroundApp" component={ PlaygroundApp } />
       <Route path="/ChatApp" component={ ChatApp } />
       <Route path="/AcmeApp" component={ AcmeApp } />
     </div>

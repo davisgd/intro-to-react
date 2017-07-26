@@ -9,6 +9,7 @@ const NavigationBar = () => {
         <li> <Link to="/Webapp"> App </Link> </li>
         <li> <Link to="/ChatApp"> ChatApp </Link> </li>
         <li> <Link to="/AcmeApp"> AcmeApp </Link> </li>
+        <li> <Link to="/PlaygroundApp"> PlaygroundApp </Link> </li>
       </ul>
     </div>
   )
