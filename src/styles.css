@@ -140,3 +140,15 @@
   color: white;
   text-shadow: grey 3px 3px 4px;
 }
+
+.open-btn {
+  background-color: red;
+  border-radius: 20px;
+  font-size: 24px;
+}
+
+.close-btn {
+  background-color: green;
+  border-radius: 20px;
+  font-size: 24px;
+}

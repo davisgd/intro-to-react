@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 
 // SMART APP / Container / has state
 
@@ -21,16 +22,35 @@ const UsersList = (props) => {
   )
 }
 
+const Counter = (props) => {
+  return(
+    <div>
+      <h1>Counter</h1>
+      <h3> counter: { props.counter } </h3>
+      <button onClick ={
+        () => props.increaseCount() }> Increase Count </button>
+      <button onClick={
+        () => props.decreaseCount() }> Decrease Count </button>
+    </div>
+  )
+}
+
 class PlaygroundApp extends React.Component {
 
   state = {
     name: "Davis",
     counter: 0,
-    users: null
+    users: null,
+    showCounter: true
   }
+
+  increaseCount = this.increaseCount.bind(this)
 
   componentDidMount(){
     this.fetchUsersFromServer();
+    const randomName = faker.name.firstName();
+    const randomProd = faker.commerce.product();
+    console.log(randomName, "loves", randomProd);
   }
 
   fetchUsersFromServer() {
@@ -48,23 +68,34 @@ class PlaygroundApp extends React.Component {
     }, 3000);
   }
 
-  increaseCounter(){
+  increaseCount(){
     this.setState({ counter: this.state.counter += 1})
   }
 
-  decreaseCounter(){
+  decreaseCount = () => {
     this.setState({ counter: this.state.counter -= 1})
+  }
+
+  toggleCounter(){
+    this.setState({ showCounter: !this.state.showCounter })
   }
 
   render() {
     return (
       <div>
-        <h1> My name is: {this.state.name} </h1>
-        <h3> counter: {this.state.counter} </h3>
-        <button onClick ={
-          () => this.increaseCounter() }> Increase Counter </button>
-        <button onClick={
-          () => this.decreaseCounter() }> Decrease Counter </button>
+        <button className={ this.state.showCounter ? "open-btn" : "close-btn" }
+         onClick={ () => this.toggleCounter() }>
+         { this.state.showCounter ? "Hide Counter" : "Show Counter" }
+        </button>
+
+        {
+          this.state.showCounter
+          ? <Counter
+              counter={ this.state.counter }
+              increaseCount={ this.increaseCount }
+              decreaseCount={ this.decreaseCount }
+            /> : null
+        }
 
         {
           this.state.users
